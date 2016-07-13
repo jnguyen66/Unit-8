@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Tip Calculator</title>
+      <script>
+      var total, rate, tip;
+
+      var calcTip=function(){
+
+      total=+document.getElementById("total").value;
+      rate=+document.getElementById("tipRate").value;
+
+      tip=total*rate/100;
+
+      document.getElementById("tip").innerHTML = "Tip: $"+tip;
+    };
+      </script>
+   </head>
+   <body>
+   
+     <label>Sales total:<input type="number" id="total"></label>
+     <label>Tip rate:<input type="number" id="tipRate"></label>
+     <input type="button" onclick="calcTip();" value="Calculate Tip">
+     <div id="tip"></div>
+   </body>
+</html>
